@@ -1,20 +1,22 @@
 {
-  "name": "track-system",
+  "name": "my-webpack-project",
   "version": "1.0.0",
-  "description": "Tracking System",
+  "description": "My webpack project",
   "main": "index.js",
   "author": "Eileen Estravo",
   "engines": {
     "node": "16.13.1",
-    "npm" : "8.1.2"
+    "npm": "8.1.2"
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "serve": "node server.js",
+    "serve": "webpack serve",
     "development": "mix",
-    "watch": "mix watch",
+    "watch": "webpack --watch",
     "production": "mix --production",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production"
   },
   "license": "MIT",
   "dependencies": {
@@ -42,6 +44,7 @@
     "webpack-cli": "^4.9.2"
   },
   "devDependencies": {
+    "@webpack-cli/generators": "^2.4.2",
     "install-peers": "^1.0.3",
     "nodemon": "^2.0.15",
     "resolve-url-loader": "^5.0.0",
