@@ -41,7 +41,7 @@ app.set('eventEmitter', eventEmitter)
 
 // Session config
 app.use(session({
-    secret: process.env.COOKIE_SECRET,
+    secret: 'thisismysectret',
     resave: false,
     store: store,
     saveUninitialized: false,
@@ -82,7 +82,7 @@ require('./routes/web')(app)
 
       
 
-const server = app.listen(port, () => {
+const server = app.listen(port, host, () => {
     console.log('Listening on port', port)
 })
 
