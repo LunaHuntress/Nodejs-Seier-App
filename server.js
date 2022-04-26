@@ -82,7 +82,7 @@ require('./routes/web')(app)
 
       
 
-const server = app.listen(port, host, () => {
+const server = app.listen(port, '0.0.0.0', () => {
     console.log('Listening on port', port)
 })
 
