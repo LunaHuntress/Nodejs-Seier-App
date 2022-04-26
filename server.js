@@ -6,7 +6,8 @@ const ejs = require('ejs')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 
-const port = process.env.port || 3300
+const port = process.env.PORT || 5000
+const host = '0.0.0.0'
 const mongoose = require('mongoose')
 const session = require('express-session');
 const flash = require('express-flash')
